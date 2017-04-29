@@ -15,3 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('login', [
+    'as' => 'login',
+    'uses' => 'LoginController@do'
+]);
+
+/**
+ * Page d'administration
+ */
+Route::get('/admin', [
+    'as' => 'admin',
+    'uses' => 'AdministrationController@Index'
+]);
+
+
+
+

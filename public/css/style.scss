@@ -1,0 +1,21 @@
+// Page d'administration
+#root
+{
+    height: 100vh;
+    #header
+    {
+        height: 64px;
+    }
+
+    #sidebar
+    {
+        // La hauteur sera 100% de la taille du viewport - 64 pixels du #header.
+        height: calc(100vh - 64px);
+        background-color: red;
+    }
+
+    #app
+    {
+        background-color: blue;
+    }
+}
