@@ -8,5 +8,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
         <!-- Toastr -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <!-- CKEditor -->
+        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <!-- JS de la page administration -->
+        <script src="{{ asset('js/Administration.js') }}"></script>
     </body>
 </html>

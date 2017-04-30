@@ -1,21 +1,51 @@
+// =========== COULEURS =========== //
+$bleuMadison: #2C3E50;
+$bleuBluewood: #34495E;
+$grisGallery: #EEEEEE;
+$grisAsbestos: #95a5a6;
+
+// ================================ //
+
 // Page d'administration
-#root
-{
-    height: 100vh;
-    #header
-    {
-        height: 64px;
-    }
+#root {
+  // Pour activer l'accélération matérielle
+  transform: translate3d(0, 0, 0);
+  height: 100vh;
+  #header {
+    background-color: $bleuBluewood;
+    height: 64px;
+    color: $grisGallery;
+    text-align: right;
+  }
+  #sidebar {
+    // Hauteur : 100% de la taille du viewport - 64 pixels du #header.
+    height: calc(100vh - 64px);
+    background-color: $bleuBluewood;
+    color: #EEE;
 
-    #sidebar
-    {
-        // La hauteur sera 100% de la taille du viewport - 64 pixels du #header.
-        height: calc(100vh - 64px);
-        background-color: red;
-    }
+    .sidebar-menu {
+      margin-left: 5px;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
 
-    #app
-    {
-        background-color: blue;
+      .sidebar-menu-item {
+        margin-left: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all .4s ease-out;
+        &:hover {
+          transform: scale(1.1, 1.1);
+          color: $grisAsbestos;
+        }
+      }
     }
+  }
+
+  #app {
+    background-color: #EEE;
+
+    #cke_article-content {
+      width: 100%;
+    }
+  }
 }
