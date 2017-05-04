@@ -10,21 +10,44 @@
         </div>
         <!-- Sidebar -->
         <nav id="sidebar" class="col-md-2">
-            <h2 class="h2-responsive"><i class="fa fa-navicon" aria-hidden="true"></i> Menu</h2>
-            <ul class="sidebar-menu">
-                <li class="sidebar-menu">
-                    <i class="fa fa-newspaper-o" aria-hidden="true"></i> Articles
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu-item"><i class="fa fa-plus" aria-hidden="true"></i> Nouvel article</li>
-                        <li class="sidebar-menu-item"><i class="fa fa-gear" aria-hidden="true"></i> Gérer articles</li>
-                        <li class="sidebar-menu-item"><i class="fa fa-tags" aria-hidden="true"></i> Catégories</li>
-                    </ul>
-                </li>
-                <li class="sidebar-menu-item"><i class="fa fa-image" aria-hidden="true"></i> Images</li>
-                <li class="sidebar-menu-item"></li>
-                <li class="sidebar-menu-item"></li>
-                <li class="sidebar-menu-item"></li>
-            </ul>
+            <h3 class="h3-responsive"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</h3>
+
+            <div id="accordion" role="tablist" class="sidebar-menu" aria-multiselectable="true">
+                <div>
+                    <!-- Partie titre du menu-item -->
+                    <div role="tab" id="headingOne" class="sidebar-menu-item active">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Gérer articles
+                            </a>
+                        </h5>
+                    </div>
+                    <!-- Partie contenu du menu-item -->
+                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item"><i class="fa fa-plus" aria-hidden="true"></i> Nouvel article</li>
+                            <li class="sidebar-menu-item"><i class="fa fa-gear" aria-hidden="true"></i> Gérer articles</li>
+                            <li class="sidebar-menu-item"><i class="fa fa-tags" aria-hidden="true"></i> Catégories</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div role="tab" id="headingTwo" class="sidebar-menu-item">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Gérer images
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item"></li>
+                            <li class="sidebar-menu-item"></li>
+                            <li class="sidebar-menu-item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
         <!-- Application -->
         <div id="app" class="col-md-10">

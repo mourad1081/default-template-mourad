@@ -1,7 +1,7 @@
 // =========== COULEURS =========== //
-$bleuMadison: #2C3E50;
+$bleuMadison:  #2C3E50;
 $bleuBluewood: #34495E;
-$grisGallery: #EEEEEE;
+$grisGallery:  #EEEEEE;
 $grisAsbestos: #95a5a6;
 
 // ================================ //
@@ -11,6 +11,7 @@ $grisAsbestos: #95a5a6;
   // Pour activer l'accélération matérielle
   transform: translate3d(0, 0, 0);
   height: 100vh;
+  background-color: #EEE;
   #header {
     background-color: $bleuBluewood;
     height: 64px;
@@ -21,31 +22,50 @@ $grisAsbestos: #95a5a6;
     // Hauteur : 100% de la taille du viewport - 64 pixels du #header.
     height: calc(100vh - 64px);
     background-color: $bleuBluewood;
-    color: #EEE;
+    color: $grisGallery;
 
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
     .sidebar-menu {
       margin-left: 5px;
       font-size: 1.3rem;
       margin-bottom: 5px;
+      list-style-type: none;
 
       .sidebar-menu-item {
-        margin-left: 5px;
         font-size: 1.1rem;
         cursor: pointer;
         transition: all .4s ease-out;
-        &:hover {
-          transform: scale(1.1, 1.1);
-          color: $grisAsbestos;
+        margin-right: -15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        a {
+          color: $grisGallery;
+          &:hover {
+            // Pour retirer le fait que les <a> soient soulignés lorsqu'on passe la souris dessus.
+            text-decoration: none;
+          }
+        }
+        &.active {
+          background-color: $grisGallery;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          a {
+            color: $bleuBluewood;
+          }
         }
       }
     }
   }
 
   #app {
-    background-color: #EEE;
-
+    margin-top: 10px;
     #cke_article-content {
       width: 100%;
+      margin: 15px;
     }
   }
 }
